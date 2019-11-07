@@ -1,1 +1,2 @@
-I am a genius
+I am a genius.
+I am cute.
