@@ -51,8 +51,8 @@
     background-color: rgba(0,0,0,0);
     position: absolute;
     right: 1em;
-    width: 30px;
-    height: 30px; 
+    width: 60px;
+    height: 60px; 
     display: none;
     z-index: 1000;
 }
@@ -79,8 +79,10 @@
 h2 {
     text-align: center;
     background-color: #c6d9ec;
-    padding: 3em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
     margin: 0;
+    font-size: 1.5em;
 }
 
 h3 {
@@ -105,14 +107,17 @@ h3 {
 }
 
 .main-footer {
-/*    display: inline-block; 不知道什麼這個會使footer無法置中*/
-    padding: .5em .5em;
-    background: #ecf2f9;
+    text-align: center;
     margin: .5em auto;
-    width: 5.8em;
 }
 
-@media (min-width: 1200px) and (max-width: 2000px) {
+.footer-content {
+    padding: .5em .5em;
+    background: #ecf2f9;
+    /* 不知道為什麼display: inline-block會使footer無法置中 */
+}
+
+@media (min-width: 1200px) and (max-width: 7000px) {
     .dropdown-menu {
         display: none;
         visibility: hidden;       
@@ -123,7 +128,7 @@ h3 {
         margin: 10px;
     }
 }
-/* dont know how to express over than 1200px just use 2000px instead of*/
+/* dont know how to express over than 1200px just use 7000px instead of*/
 
 @media (min-width: 800px) and (max-width: 1200px) {
     .container
@@ -170,8 +175,12 @@ h3 {
     line-height: normal;
     margin-right: 5%;
     margin-top: 8%;   /* 在小螢幕margin比例重新調整比較美觀 */
+    }
+
+    /* h2 {
+        padding-right: 0.1em;
+        padding-left: 8.1%; 
+     }   */
 }
-
-
 
 
