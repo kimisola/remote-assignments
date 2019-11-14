@@ -1,0 +1,215 @@
+.main-header {
+    padding-bottom: 3em;
+    background-color: #f2f2f2;
+}
+
+.name {
+    float: left;
+    padding-left: 2.5%;
+}
+
+.main-nav {
+    float: right;
+    word-spacing: 2em;
+    padding-right: 2em;
+}
+
+.dropdown-menu {
+    position: relative
+}
+
+.dropdown-nav {
+    float: right;
+}
+
+.dropdown-menu ul {
+    float: right;
+    line-height: normal;
+    
+    z-index: 1;
+    
+    visibility: hidden;
+    transition: visibility 0.5s;
+    opacity: 0;
+
+    background-color: #ffffff;
+    position: fixed;
+    left: 55%;
+    right: 0%;
+    margin: 0px;
+    height: 100%;
+}
+
+.dropdown-menu img {
+    position: absolute;
+    right: 1em;
+    width: 2.3em;
+    height: 2.8em;  
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select: none;
+}
+
+/* .dropdown-menu div {
+    background-color: #ffffff;
+    position: absolute;
+    width: 20px;
+    height: 20px; 
+    display: none;
+    z-index: 1000;
+} */
+/* ↑一個隱藏的區塊使user點擊後可以收合菜單_assignment */
+
+.dropdown-menu img,
+.dropdown-menu div {
+    /* cursor: crosshair; */
+    outline: 0; 
+/* hide the focus frame. */
+    -webkit-tap-highlight-color:rgba(0,0,0,0);    
+}
+
+.dropdown-menu img:focus ~ ul {
+    visibility: visible;
+    opacity: 1;
+/* if dropdown-menu is clicked, show the items. */
+}
+
+.dropdown-menu img:focus ~ span {
+    display: block;
+/* if dropdown-menu is clicked, show this div to let user can close the menu. */  
+}
+
+.dropdown-menu span:focus ~ ul {
+    display: none;
+}
+
+.menuX {
+    float: right;
+    margin-right: 20%;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+
+
+h2 {
+    text-align: center;
+    background-color: #c6d9ec;
+    padding: 3em;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+.box-container1,
+.box-container2,
+.boxContainer3,
+.boxContainer4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box-itemA {
+    flex: none;
+    text-align: center;
+    width: 45%;
+    height: 6em;
+    margin: 10px;    
+    padding-top: 1%;
+    background-color: lightslategray;
+}
+
+.mainfooter {
+/*    display: inline-block; 不知道什麼這個會使footer無法置中*/
+    padding: .5em .5em;
+    background: #ecf2f9;
+    margin: .5em auto;
+    width: 5.8em;
+}
+
+.box-itemB {
+    display: none;
+    flex: none;
+    text-align: center;
+    width: 45%;
+    height: 6em;
+    margin: 10px;    
+    padding-top: 1%;
+    background-color: lightslategray;
+    z-index: 1;
+} 
+
+/* .mainfooter:focus ~box-itemB {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+
+@media (min-width: 1200px) and (max-width: 7000px) {
+    .dropdown-menu {
+        display: none;
+        visibility: hidden;       
+    }
+    .box-item {
+        width: 560px;  /* width fixd 1200px */
+        height: 100px;
+        margin: 10px;
+    }
+}
+/* dont know how to express over than 1200px just use 2000px instead of*/
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .container
+    .box-contation {
+        max-width: 100%;
+    }
+
+    .dropdown-menu {
+        display: none;
+        visibility: hidden;       
+    }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .container
+    .box-contation {
+        max-width: 100%;
+    }
+    
+    .main-nav {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 500px) {
+    .container
+    .box-container {
+        width: 90%;
+        text-align: center;
+    }
+    .main-nav {
+        display: none;
+        visibility: hidden;
+    }
+    .box-itemA,
+    .box-itemB {
+        width: 90%;
+        height: 6em;
+        margin: .5em;
+        padding-top: 1em;
+    }
+    .dropdown-menu ul {
+    float: right;
+    line-height: normal;
+    /* margin-right: 5%;
+    margin-top: 8%;   在小螢幕margin比例重新調整比較美觀 */
+}
+
+}
