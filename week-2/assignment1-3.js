@@ -29,7 +29,6 @@ function calculate(args){
     return result;
     }
 
-
     calculate( {op:"+", n1:3, n2:4} );
     console.log(calculate( {op:"+", n1:3, n2:4} ));   // 7
 
@@ -39,17 +38,17 @@ function calculate(args){
         n1: 3,
         n2: 4
     }
-    console.log(arrys);  // 7 
+    console.log(calculate(args)); 
 
 // way 2.
-    var ary1 = [ {op: "+"} ];
-    var ary2 = [ {n1: "3"} ];
-    var ary3 = [ {n2: "4"} ];
-    
-    var arrys = ary1.concat(ary2, ary3);
-    
-    console.log(arrys);  // [ { op:"+" }, { n1:"3" }, { n2:"4" } ]
-    console.log( calculate(arrys) );  // 'Not supported'
+    obj1 = {op:"+", n1:3, n2:1}
+    console.log(calculate(obj1));
+
+// way 3.
+    obj2 = {op:"+"}
+    obj2.n1 = 3
+    obj2.n2 = 1
+    console.log(calculate(obj2))
 
     // Try to call calculate function correctly
     /*

@@ -1,6 +1,5 @@
 const message = document.getElementById("message");
 const mainfooter = document.querySelector(".mainfooter");
-const boxContainer3 = document.querySelector(".box-boxContainer3");
 const boxitemB = document.querySelectorAll(".box-itemB");
 
 
@@ -10,5 +9,7 @@ message.addEventListener("click", () => {
 });
 
 mainfooter.addEventListener("click", () => {
-    mainfooter.style.color = "red";
-});   //為什麼這傢伙不動作QAQ?
+    for (var i=0; i<boxitemB.length; i+=1){
+        boxitemB[i].style.display = 'block';
+        }
+});  // 要用迴圈去access每個boxitemB
