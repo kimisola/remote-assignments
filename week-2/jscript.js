@@ -9,7 +9,13 @@ message.addEventListener("click", () => {
 });
 
 mainfooter.addEventListener("click", () => {
-    for (var i=0; i<boxitemB.length; i+=1){
-        boxitemB[i].style.display = 'block';
+    for (var i=0; i<boxitemB.length; i++){
+
+        if (boxitemB[i].style.display == 'block') {
+        boxitemB[i].style.display = 'none';
+        } else {
+            boxitemB[i].style.display = 'block';
+
         }
+    }
 });  // 要用迴圈去access每個boxitemB

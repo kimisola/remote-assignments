@@ -26,7 +26,7 @@
     float: right;
     line-height: normal;
     
-    z-index: 1;
+    z-index: 999;
     
     visibility: hidden;
     transition: visibility 0.5s;
@@ -36,7 +36,8 @@
     position: fixed;
     left: 55%;
     right: 0%;
-    margin: 0px;
+    top: 0%;
+    margin: 0%;
     height: 100%;
 }
 
