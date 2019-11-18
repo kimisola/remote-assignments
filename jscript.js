@@ -18,4 +18,4 @@ mainfooter.addEventListener("click", () => {
 
         }
     }
-});  // 要用迴圈去access每個boxitemB
+});  // querySelectorAll回傳的是陣列要用迴圈去access每個boxitemB

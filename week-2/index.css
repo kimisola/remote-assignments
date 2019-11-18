@@ -124,14 +124,6 @@ h3 {
     background-color: lightslategray;
 }
 
-.mainfooter {
-/*    display: inline-block; 不知道什麼這個會使footer無法置中*/
-    padding: .5em .5em;
-    background: #ecf2f9;
-    margin: .5em auto;
-    width: 5.8em;
-}
-
 .box-itemB {
     display: none;
     flex: none;
@@ -143,6 +135,16 @@ h3 {
     background-color: lightslategray;
     z-index: 1;
 } 
+
+.mainfooter {
+/*    display: inline-block; 不知道什麼這個會使footer無法置中*/
+    padding: .5em .5em;
+    background: #ecf2f9;
+    margin: .5em auto;
+    width: 5.8em;
+}
+
+
 
 /* .mainfooter:focus ~box-itemB {
     display: block;
@@ -157,17 +159,11 @@ h3 {
         display: none;
         visibility: hidden;       
     }
-    .box-item {
-        width: 560px;  /* width fixd 1200px */
-        height: 100px;
-        margin: 10px;
-    }
 }
 /* dont know how to express over than 1200px just use 2000px instead of*/
 
 @media (min-width: 800px) and (max-width: 1200px) {
-    .container
-    .box-contation {
+    .container{
         max-width: 100%;
     }
 
@@ -178,8 +174,7 @@ h3 {
 }
 
 @media (min-width: 500px) and (max-width: 800px) {
-    .container
-    .box-contation {
+    .container{
         max-width: 100%;
     }
     
