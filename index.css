@@ -98,7 +98,7 @@ h2 {
     text-align: center;
     background-color: #c6d9ec;
     padding: 3em;
-    margin: 0;
+    margin: 0em;
 }
 
 h3 {
@@ -107,8 +107,8 @@ h3 {
 
 .box-container1,
 .box-container2,
-.boxContainer3,
-.boxContainer4 {
+.box-container3,
+.box-container4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
