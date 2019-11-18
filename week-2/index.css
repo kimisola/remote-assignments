@@ -133,7 +133,6 @@ h3 {
     margin: 10px;    
     padding-top: 1%;
     background-color: lightslategray;
-    z-index: 1;
 } 
 
 .mainfooter {
@@ -144,16 +143,6 @@ h3 {
     width: 5.8em;
 }
 
-
-
-/* .mainfooter:focus ~box-itemB {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-} */
-
-
-
 @media (min-width: 1200px) and (max-width: 7000px) {
     .dropdown-menu {
         display: none;
@@ -163,10 +152,6 @@ h3 {
 /* dont know how to express over than 1200px just use 2000px instead of*/
 
 @media (min-width: 800px) and (max-width: 1200px) {
-    .container{
-        max-width: 100%;
-    }
-
     .dropdown-menu {
         display: none;
         visibility: hidden;       
@@ -174,10 +159,6 @@ h3 {
 }
 
 @media (min-width: 500px) and (max-width: 800px) {
-    .container{
-        max-width: 100%;
-    }
-    
     .main-nav {
         display: none;
         visibility: hidden;
@@ -185,9 +166,8 @@ h3 {
 }
 
 @media (max-width: 500px) {
-    .container
-    .box-container {
-        width: 90%;
+    .container {
+        width: 100%;
         text-align: center;
     }
     .main-nav {
@@ -200,6 +180,7 @@ h3 {
         height: 6em;
         margin: .5em;
         padding-top: 1em;
+        text-align: center;
     }
     .dropdown-menu ul {
     float: right;
