@@ -1,0 +1,27 @@
+<!DOCTYPE>
+    <html>
+        <head>
+            <h1>Welocme to sum.html</h1>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+            <script>
+                function loadDoc() {
+                    const inputNun = document.getElementById("inputnumber");
+                    const inputNunValue = inputNun.value;
+                    $('#result').load('getData?number=' + inputNun.value);
+                };
+            </script>
+
+        </head>
+        <body>
+                <input type="text" placeholder="write number(s) here. . ."
+                       id="inputnumber"> </input>
+                <input  type="submit" value="submit" id="submit" onclick="loadDoc(); return flase"></input>
+           
+            <p id="result"> </p>
+        </body>
+
+    </html>
