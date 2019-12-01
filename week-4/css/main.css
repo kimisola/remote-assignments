@@ -20,17 +20,11 @@
 
 .dropdown-nav {
     float: right;
-}
-
-.dropdown-menu ul {
-    float: right;
     line-height: normal;
     
     z-index: 999;
     
-    visibility: hidden;
-    transition: visibility 0.5s;
-    opacity: 0;
+    display: none;
 
     background-color: #ffffff;
     position: fixed;
@@ -53,38 +47,6 @@
     user-select: none;
 }
 
-/* .dropdown-menu div {
-    background-color: #ffffff;
-    position: absolute;
-    width: 20px;
-    height: 20px; 
-    display: none;
-    z-index: 1000;
-} */
-/* ↑一個隱藏的區塊使user點擊後可以收合菜單_assignment */
-
-.dropdown-menu img,
-.dropdown-menu div {
-    /* cursor: crosshair; */
-    outline: 0; 
-/* hide the focus frame. */
-    -webkit-tap-highlight-color:rgba(0,0,0,0);    
-}
-
-.dropdown-menu img:focus ~ ul {
-    visibility: visible;
-    opacity: 1;
-/* if dropdown-menu is clicked, show the items. */
-}
-
-.dropdown-menu img:focus ~ span {
-    display: block;
-/* if dropdown-menu is clicked, show this div to let user can close the menu. */  
-}
-
-.dropdown-menu span:focus ~ ul {
-    display: none;
-}
 
 .menuX {
     float: right;
@@ -130,10 +92,10 @@ h3 {
     text-align: center;
     width: 45%;
     height: 6em;
-    margin: 10px;    
+    margin: 10px;
     padding-top: 1%;
     background-color: lightslategray;
-} 
+}
 
 .mainfooter {
 /*    display: inline-block; 不知道什麼這個會使footer無法置中*/
