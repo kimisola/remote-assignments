@@ -10,7 +10,7 @@
 
 .main-nav {
     float: right;
-    word-spacing: 20em;
+    word-spacing: 2em;
     padding-right: 2em;
 }
 
@@ -81,7 +81,7 @@ h3 {
     text-align: center;
     width: 45%;
     height: 6em;
-    margin: 10px;    
+    margin: 10px;  
     padding-top: 1%;
     background-color: lightslategray;
 }

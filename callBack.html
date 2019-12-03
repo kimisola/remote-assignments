@@ -36,9 +36,9 @@
 
         function render(data){
             for (var i=0; i < data.length; i++) {
-                var para1 = document.createElement("P");   
-                var para2 = document.createElement("P"); 
-                var para3 = document.createElement("P");
+                var para1 = document.createElement("li");   
+                var para2 = document.createElement("p"); 
+                var para3 = document.createElement("p");
                 para1.textContent = data[i]['name'];
                 para2.textContent = data[i]['price'];
                 para3.textContent = data[i]['description'];

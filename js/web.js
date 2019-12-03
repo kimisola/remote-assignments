@@ -3,29 +3,31 @@ class Top extends React.Component {
         super(props);
         this.state = { 
           isToggleOn: true,
-          display: 'none'
     };
     this.handleClick = this.handleClick.bind(this);
     }
  
     handleClick() {
-  console.log(this.state);
-        this.setState(prevState => ({
-          isToggleOn: !prevState.isToggleOn,
+      console.log(this.state);
+              this.setState({isToggleOn: !this.state.isToggleOn},function(){
+           console.log(this.state);
+          });
+    }
         // 因為異步執行為了防止點擊兩次才改變所以把style={{display:this.state.isToggleOn ? 'none':'block'}}
         // 改放置被執行的對象中
-        }))
-      }
 
     render() {
         return (
             <header className="main-header">
           <p className="name"> Anny's Assignment3 / Logo</p>
             <ul className="main-nav">
-                <il><a href="#">&emsp;Item1</a></il>
-                <il><a href="#">&emsp;Item2</a></il>
-                <il><a href="#">&emsp;Item3</a></il>
-                <il><a href="#">&emsp;Item4</a></il>
+                <il><a href="#">Item1</a></il>
+                <il> </il>
+                <il> <a href="#">Item2</a></il>
+                <il> </il>
+                <il> <a href="#">Item3</a></il>
+                <il> </il>
+                <il><a href="#">Item4</a></il>
             </ul>
             <div className="dropdown-menu"> 
                 <img src="img/icon.png" onClick={this.handleClick} />
@@ -62,6 +64,7 @@ class Message extends React.Component {
     }
 };
 
+
 class TopBoX extends React.Component {
     constructor(props) {
         super(props);
@@ -82,12 +85,12 @@ class TopBoX extends React.Component {
         return (
             <div>
             <div className="box-container1">
-                <div className="box-itemA">Content Box1</div>
-                <div className="box-itemA">Content Box2</div>
+                <div className="box-itemA" id="box0">Content Box1</div>
+                <div className="box-itemA" id="box1">Content Box2</div>
             </div>
             <div className="box-container2">    
-                 <div className="box-itemA">Content Box3</div>
-                 <div className="box-itemA">Content Box4</div>
+                 <div className="box-itemA" id="box2">Content Box3</div>
+                 <div className="box-itemA" id="box3">Content Box4</div>
             </div>
             <div className="mainfooter" onClick={this.handleClick}>Call to Action</div>
             <div className="box-container3">
@@ -102,6 +105,28 @@ class TopBoX extends React.Component {
         )
     }
 };
+
+function ajax(src, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let response = JSON.parse(xhr.responseText);
+            callback(response)
+        }
+    };
+    xhr.open('GET', src);
+    xhr.send();
+};
+
+function render(data){ 
+    for ( var i=0; i < data.length; i++ ) {
+        document.getElementById("box"+[i]).innerHTML = "Name: "+data[i]['name'] +"<br>"+ "Price: "+ data[i]['price'] + "<br>"+ "Description: " +data[i]['description'];
+    }
+};
+
+ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function(response){
+    render(response);
+}); 
 
 const App =() => {
         return (
